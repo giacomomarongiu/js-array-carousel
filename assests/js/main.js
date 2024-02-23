@@ -44,8 +44,9 @@ for (let index = 0; index < slides.length; index++) {
     // Verifico se sto inserendo correttamente il tutto
     console.log(slideMUp);
     // BONUS 2
+    let mini_slide = slides [index]
     //Dichiaro una variabile al cui interno c'è il codice che mi serve per inserire le immagini
-    let subBoxMUp = `<img class="mini_box" src="./assests/img/${slide}" alt="">`
+    let subBoxMUp = `<img class="mini_box" src="./assests/img/${mini_slide}" alt="">`
     // Utilizzo la proprietà per aggiungere al DOM questa stringa di codice
     subBoxElement.innerHTML += subBoxMUp;
     // 
