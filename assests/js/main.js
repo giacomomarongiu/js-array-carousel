@@ -27,7 +27,7 @@ console.log(slidesElement); // slides on DOM
 // Seleziono elemento della DOM a cui voglio aggiungere le immagini
 const subBoxElement = document.querySelector('.sub_box')
 // Verifico di aver selezionato l'elemento correttamente
-console.log(subBoxElement); // slides on DOM
+console.log(subBoxElement); // slides on mini box on DOM
 
 
 // Avvio un ciclio che mi permette di scorrere le immagini
