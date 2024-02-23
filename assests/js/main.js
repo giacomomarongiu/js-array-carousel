@@ -1,7 +1,7 @@
 console.log("Hello World");
 
 //Creare un array con le nostre immagini (i nomi)
-const slides =[
+const slides = [
     '01.webp',
     '02.webp',
     '03.webp',
@@ -28,5 +28,13 @@ for (let index = 0; index < slides.length; index++) {
     const slide = slides[index];
     // Vedo cosa mi mostra
     console.log(slide); // Vedo selezionati i vari elementi del mio array
-    
+    // Aggiungo il codice al mio DOM per ogni immagine del mio array
+    // Assegno a una variabile la struttura base da inserire nel DOM
+    // Utilizzo l'operatore ? per aggiungere la classe active solo alla prima immagine
+    let slideMUp = `<img class="${index === imgShowedIndex ? 'active' : ''}" src="./assests/img/${slide}" alt="">`
+    // Utilizzo il metodo per aggiungere al DOM questa stringa di codice
+    slidesElement.innerHTML += slideMUp;
+    //Verifico se sto inserendo correttamente il tutto
+    console.log(slideMUp); 
 }
+

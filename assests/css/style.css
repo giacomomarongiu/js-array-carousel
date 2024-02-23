@@ -1,8 +1,8 @@
-*{
-    background-color:bisque;
+* {
+    background-color: bisque;
 }
 
-.slider{
+.slider {
     padding-top: 5rem;
     max-width: 550px;
     margin: auto;
@@ -11,7 +11,11 @@
         max-width: 100%;
     }
 
-    .controls{
+    & img:not(.active) {
+        display: none;
+    }
+
+    .controls {
         display: flex;
         justify-content: space-between;
 

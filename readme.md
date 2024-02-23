@@ -32,6 +32,15 @@ Al momento giusto (ihihhi starà a voi capire quale) rispondete a questa domanda
 ## Steps
 - Milestone 1
 -- Creo su HTML la struttura
+- Milestone 2
+-- Rimuovere il markup dal nostro DOM
+-- Creare un array con le nostre immagini
+-- Aggiungere le immagini al nostro DOM
+-- Ottenere lo stesso risultato di inizio Milestone 2
+
 
 
 ### Tools
+- Milestone 2
+-- Array con immagini all'interno
+-- Console.log
