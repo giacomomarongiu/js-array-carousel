@@ -1,8 +1,3 @@
-* {
-    background-color: ;
-}
-
-
 
 .slider {
     max-width: 550px;
@@ -11,10 +6,26 @@
 
     & img {
         max-width: 100%;
+        position: relative;
     }
 
     & img:not(.active) {
         display: none;
+    }
+
+    .slides .sub_box{
+        position: absolute;
+        background: rgba(0, 0, 0, 0.374);
+        right: 0;
+        width: 40%;
+        height: 100%;
+        z-index: 1;
+        
+        & .mini_box {
+            width: 100%;
+            height: 20%;
+            display: block;
+        }
     }
 
     .controls {

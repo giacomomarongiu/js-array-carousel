@@ -23,6 +23,13 @@ const slidesElement = document.querySelector('.slides')
 // Verifico di aver selezionato l'elemento correttamente
 console.log(slidesElement); // slides on DOM
 
+// BONUS 2
+// Seleziono elemento della DOM a cui voglio aggiungere le immagini
+const subBoxElement = document.querySelector('.sub_box')
+// Verifico di aver selezionato l'elemento correttamente
+console.log(subBoxElement); // slides on DOM
+
+
 // Avvio un ciclio che mi permette di scorrere le immagini
 for (let index = 0; index < slides.length; index++) {
     const slide = slides[index];
@@ -32,10 +39,16 @@ for (let index = 0; index < slides.length; index++) {
     // Assegno a una variabile la struttura base da inserire nel DOM
     // Utilizzo l'operatore ? per aggiungere la classe active solo alla prima immagine
     let slideMUp = `<img class="${index === imgShowedIndex ? 'active' : ''}" src="./assests/img/${slide}" alt="">`
-    // Utilizzo il metodo per aggiungere al DOM questa stringa di codice
+    // Utilizzo la proprietà per aggiungere al DOM questa stringa di codice
     slidesElement.innerHTML += slideMUp;
     // Verifico se sto inserendo correttamente il tutto
     console.log(slideMUp);
+    // BONUS 2
+    //Dichiaro una variabile al cui interno c'è il codice che mi serve per inserire le immagini
+    let subBoxMUp = `<img class="mini_box" src="./assests/img/${slide}" alt="">`
+    // Utilizzo la proprietà per aggiungere al DOM questa stringa di codice
+    subBoxElement.innerHTML += subBoxMUp;
+    // 
 }
 
 // Creo due funzioni al click di un elemento del DOM
