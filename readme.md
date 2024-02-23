@@ -37,6 +37,9 @@ Al momento giusto (ihihhi starà a voi capire quale) rispondete a questa domanda
 -- Creare un array con le nostre immagini
 -- Aggiungere le immagini al nostro DOM
 -- Ottenere lo stesso risultato di inizio Milestone 2
+- Milestone 3
+-- Creo due funzioni al click di un elemento del DOM
+-- Le funzioni rimuovono la classe active da un img la assegnano ad un' altra
 
 
 
@@ -44,3 +47,6 @@ Al momento giusto (ihihhi starà a voi capire quale) rispondete a questa domanda
 - Milestone 2
 -- Array con immagini all'interno
 -- Console.log
+-- Ciclo For
+-- Operatore ?
+-- Element.innerHTML

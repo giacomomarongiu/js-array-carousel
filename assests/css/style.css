@@ -1,11 +1,13 @@
 * {
-    background-color: bisque;
+    background-color: ;
 }
 
+
+
 .slider {
-    padding-top: 5rem;
     max-width: 550px;
     margin: auto;
+    position: relative;
 
     & img {
         max-width: 100%;
@@ -16,11 +18,17 @@
     }
 
     .controls {
+        height: 100%;
+        position: absolute;
+        left: 40%;
+        top:0;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
 
         & button {
-            background-color: beige;
+            background-color: white;
+        }
+
         }
     }
-}
