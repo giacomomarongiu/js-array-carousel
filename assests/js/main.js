@@ -35,22 +35,29 @@ for (let index = 0; index < slides.length; index++) {
     // Utilizzo il metodo per aggiungere al DOM questa stringa di codice
     slidesElement.innerHTML += slideMUp;
     // Verifico se sto inserendo correttamente il tutto
-    console.log(slideMUp); 
+    console.log(slideMUp);
 }
 
 // Creo due funzioni al click di un elemento del DOM
 // Funzione UP
-document.querySelector('.up').addEventListener('click', function (){
+document.querySelector('.up').addEventListener('click', function () {
     // Vedo se ho selezionato bene il bottone
     console.log(document.querySelector('.up'));
     // Incremento l'indice del mio array
     imgShowedIndex++;
+    // BONUS 1
+    // Eventualità in cui la variabile vada oltre la lunghezza dell'array
+    // Devo mettere il -1 perché l'indice dell'array parte da zero e lenght da 1
+    if (imgShowedIndex > (slides.length - 1)) {
+        // Riinizia da capo
+        imgShowedIndex = 0;
+    }
     // Vedo se è ok
     console.log(imgShowedIndex);//corretto
     // Seleziono l'immagine a cui voglio togliere la classe
     let imgShowed = document.querySelector('img.active');
     // Verifico la selezione
-    console.log( document.querySelector('img.active')); //ok
+    console.log(document.querySelector('img.active')); //ok
     // Rimuovo la classe
     imgShowed.classList.remove('active')
     // Devo assegnare la classe all'altra immagine
@@ -70,17 +77,24 @@ document.querySelector('.up').addEventListener('click', function (){
 })
 
 //Funzione DOWN
-document.querySelector('.down').addEventListener('click', function (){
+document.querySelector('.down').addEventListener('click', function () {
     // Vedo se ho selezionato bene il bottone
     console.log(document.querySelector('.down'));
     // Decremento l'indice del mio array
     imgShowedIndex--;
+    // BONUS 1
+    // Eventualità in cui la variabile vada oltre la lunghezza dell'array
+    if (imgShowedIndex < 0) {
+        // Riinizia dal fondo
+        // Devo mettere il -1 perché l'indice dell'array parte da zero e lenght da 1
+        imgShowedIndex = (slides.length - 1);
+    }
     // Vedo se è ok
     console.log(imgShowedIndex);//corretto
     // Seleziono l'immagine a cui voglio togliere la classe
     let imgShowed = document.querySelector('img.active');
     // Verifico la selezione
-    console.log( document.querySelector('img.active')); //ok
+    console.log(document.querySelector('img.active')); //ok
     // Rimuovo la classe
     imgShowed.classList.remove('active')
     // Devo assegnare la classe all'altra immagine
