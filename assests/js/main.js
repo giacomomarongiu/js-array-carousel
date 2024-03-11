@@ -46,7 +46,7 @@ for (let index = 0; index < slides.length; index++) {
     // BONUS 2
     let mini_slide = slides [index]
     //Dichiaro una variabile al cui interno c'è il codice che mi serve per inserire le immagini
-    let subBoxMUp = `<img class="mini_box" src="./assests/img/${mini_slide}" alt="">`
+    let subBoxMUp = `<img class="mini_box ${index === imgShowedIndex ? 'mini-active' : ''}" src="./assests/img/${mini_slide}" alt="">`
     // Utilizzo la proprietà per aggiungere al DOM questa stringa di codice
     subBoxElement.innerHTML += subBoxMUp;
     // 
@@ -70,24 +70,32 @@ document.querySelector('.up').addEventListener('click', function () {
     console.log(imgShowedIndex);//corretto
     // Seleziono l'immagine a cui voglio togliere la classe
     let imgShowed = document.querySelector('img.active');
+    let miniImgShowed= document.querySelector('img.mini-active')
+    console.log(miniImgShowed);
     // Verifico la selezione
     console.log(document.querySelector('img.active')); //ok
     // Rimuovo la classe
     imgShowed.classList.remove('active')
+    miniImgShowed.classList.remove('mini-active')
     // Devo assegnare la classe all'altra immagine
     // Prima mi serve selezionare tutti gli elementi della DOM
     // Questa costante diventa un array al cui all'interno ci sono le slides
     const allSlides = document.querySelectorAll('.slides img')
+    const miniSlides = document.querySelectorAll('.mini_box')
     // Verifico la selezione 
     console.log(allSlides); //Nodelist
+    console.log(miniSlides);
     // Io ho l'indice (incrementato in questo caso) dell'img che desidero vedere
     allSlides[imgShowedIndex];
+    miniSlides[imgShowedIndex]
     // Verifico se è corretto
     console.log(allSlides[imgShowedIndex]);
     // Assegno il suo nuovo valore a imgShowed
     imgShowed = allSlides[imgShowedIndex];
+    miniImgShowed=miniSlides[imgShowedIndex]
     // Assegno di nuovo la classe 
     imgShowed.classList.add('active')
+    miniImgShowed.classList.add('mini-active')
 })
 
 //Funzione DOWN
@@ -107,6 +115,7 @@ document.querySelector('.down').addEventListener('click', function () {
     console.log(imgShowedIndex);//corretto
     // Seleziono l'immagine a cui voglio togliere la classe
     let imgShowed = document.querySelector('img.active');
+    let miniImgShowed= document.querySelector('img.mini-active')
     // Verifico la selezione
     console.log(document.querySelector('img.active')); //ok
     // Rimuovo la classe
